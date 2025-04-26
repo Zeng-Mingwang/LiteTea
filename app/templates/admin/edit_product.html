@@ -15,30 +15,60 @@
         <div class="card-body">
             <form id="editProductForm">
                 <input type="hidden" name="id" value="{{ product.id }}">
-                <div class="mb-3">
-                    <label class="form-label">商品名称</label>
-                    <input type="text" class="form-control" name="name" value="{{ product.name }}" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">商品类别</label>
-                    <input type="text" class="form-control" name="category" value="{{ product.category }}" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">价格</label>
-                    <input type="number" class="form-control" name="price" step="0.01" value="{{ product.price }}" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">商品描述</label>
-                    <textarea class="form-control" name="description" rows="3" required>{{ product.description }}</textarea>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">图片URL</label>
-                    <input type="text" class="form-control" name="image_url" value="{{ product.image_url }}">
-                    <small class="form-text text-muted">可选，如果不填写将使用默认图片</small>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">产品特点</label>
-                    <textarea class="form-control" name="product_features" rows="2">{{ product.product_features }}</textarea>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">商品名称</label>
+                            <input type="text" class="form-control" name="name" value="{{ product.name }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">商品类别</label>
+                            <input type="text" class="form-control" name="category" value="{{ product.category }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">价格</label>
+                            <input type="number" class="form-control" name="price" step="0.01" value="{{ product.price }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">商品描述</label>
+                            <textarea class="form-control" name="description" rows="3" required>{{ product.description }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">图片URL</label>
+                            <input type="text" class="form-control" name="image_url" value="{{ product.image_url }}">
+                            <small class="form-text text-muted">可选，如果不填写将使用默认图片</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">产品特点</label>
+                            <textarea class="form-control" name="product_features" rows="2">{{ product.product_features }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">配料表</label>
+                            <textarea class="form-control" name="ingredients" rows="2">{{ product.ingredients }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">产地信息</label>
+                            <textarea class="form-control" name="origin" rows="2">{{ product.origin }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">规格参数</label>
+                            <textarea class="form-control" name="specifications" rows="2">{{ product.specifications }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">适宜人群</label>
+                            <textarea class="form-control" name="suitable_crowd" rows="2">{{ product.suitable_crowd }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">客观参数分析</label>
+                            <textarea class="form-control" name="objective_analysis" rows="2">{{ product.objective_analysis }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">科学饮用建议</label>
+                            <textarea class="form-control" name="drinking_suggestions" rows="2">{{ product.drinking_suggestions }}</textarea>
+                        </div>
+                    </div>
                 </div>
                 <div class="text-end">
                     <button type="button" class="btn btn-secondary me-2" onclick="history.back()">取消</button>

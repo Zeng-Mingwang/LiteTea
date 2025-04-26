@@ -180,18 +180,21 @@ def update_product(product_id):
         product = Product.query.get_or_404(product_id)
         data = request.form
         
+        # 基本信息
         product.name = data['name']
         product.category = data['category']
         product.price = float(data['price'])
         product.description = data['description']
         product.image_url = data.get('image_url', '')
+        
+        # 产品详细信息
         product.product_features = data.get('product_features', '')
-        product.flavor_profile = data.get('flavor_profile', '')
-        product.texture_description = data.get('texture_description', '')
-        product.after_taste = data.get('after_taste', '')
-        product.mood_trigger = data.get('mood_trigger', '')
-        product.drinking_scenario = data.get('drinking_scenario', '')
-        product.flavor_association = data.get('flavor_association', '')
+        product.ingredients = data.get('ingredients', '')
+        product.origin = data.get('origin', '')
+        product.specifications = data.get('specifications', '')
+        product.suitable_crowd = data.get('suitable_crowd', '')
+        product.objective_analysis = data.get('objective_analysis', '')
+        product.drinking_suggestions = data.get('drinking_suggestions', '')
         
         db.session.commit()
         return jsonify({'status': 'success'})
