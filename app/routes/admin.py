@@ -323,7 +323,8 @@ def export_users():
             'behavior_type': behavior.behavior_type,
             'created_at': behavior.created_at.strftime('%Y-%m-%d %H:%M:%S'),
             'duration': behavior.duration,
-            'is_recommended': behavior.is_recommended
+            'is_recommended': behavior.is_recommended,
+            'recommended_product_ids': behavior.recommended_product_ids
         })
     
     # 创建JSON文件

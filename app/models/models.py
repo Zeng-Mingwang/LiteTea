@@ -56,3 +56,4 @@ class UserBehavior(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     duration = db.Column(db.Integer)  # 停留时间（秒）
     is_recommended = db.Column(db.Boolean, default=False)  # 是否是详情页推荐的商品 
+    recommended_product_ids = db.Column(db.String(100))  # 存储推荐产品的编号列表，用逗号分隔 
